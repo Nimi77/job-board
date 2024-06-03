@@ -1,0 +1,125 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* hero section styling */
+.lhb-text h2 {
+  line-height: 43.4px;
+}
+.lhb-text p {
+  line-height: 23.8px;
+  font-size: 13px;
+}
+.right-hb img {
+  width: 1200px;
+  height: 400px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+/* Background pattern for lines */
+.bg-pattern {
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.1) 75%,
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.1) 75%,
+      rgba(255, 255, 255, 0.1)
+    );
+  background-size: 7px 7px;
+  background-position: 0 0, 10px 10px;
+}
+.lhb-input {
+  width: 42rem;
+}
+.search-btn{
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+@media screen and (max-width: 1078px) {
+  .mw {
+    max-width: 85%;
+  }
+  .h-129 {
+    height: 480px;
+  }
+  .lhb-text{
+    margin-bottom:3.2rem;
+  }
+  .lhb-input {
+    width: 36rem;
+  }
+  .pattern-container {
+    transform: translateX(-20px);
+    top: 10px;
+  }
+  .right-hb img {
+    width: 1200px;
+    height: 360px;
+  }
+}
+@media screen and (max-width: 948px) {
+  .h-129 {
+    height: 450px;
+  }
+  .lhb-text h2{
+    line-height:2.5rem;
+  }
+  .lhb-text p> slot{
+    display:none
+  }
+  .lhb-input {
+    width: 34rem;
+    font-size:12px
+  }
+  .right-hb img {
+    height: 340px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mw {
+    max-width: 90%;
+  }
+  .h-129 {
+    height: 450px;
+  }
+  .hb-container {
+    gap: 19px;
+  }
+  .lhb-text{
+    margin-bottom:3.4rem;
+  }
+  .lhb-text h2 {
+    font-size: 26px;
+    line-height: 33.4px;
+  }
+  .lhb-text p {
+    line-height: 23.8px;
+    font-size: 13px;
+  }
+  .lhb-text p > slot {
+    display: none;
+  }
+  .lhb-input {
+    width: 30rem;
+    bottom: 24px;
+  }
+  .pattern-container {
+    transform: translateX(-14px);
+    top: 14px;
+  }
+  .right-hb img {
+    width: 600px;
+    height: 320px;
+  }
+}
+@media screen and (max-width: 500px) {
+}

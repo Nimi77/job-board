@@ -1,0 +1,25 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html{
+  scroll-behaviour:smooth;
+}
+.mw {
+  max-width: 85%;
+}
+.border-6{
+  border-width:6px;
+}
+.w-86{
+  width:50%;
+}
+.slideOne-img{
+  wdth:900px;
+  height:500px;
+}
+/* Custom underline style for the h1 element */
+/* .underline-custom {
+  position: relative;
+  display: inline-block;
+} */
