@@ -1,13 +1,16 @@
-import DesktopNav from "../Components/Navigation/DesktopNav";
-import MobileNav from "../Components/Navigation/MobileNav";
-import HeroText from "../Components/HeroBody/HeroText";
+import DesktopNav from "../Components/HeroContent/Navigation/DesktopNav";
+import MobileNav from "../Components/HeroContent/Navigation/MobileNav";
+import HeroText from "../Components/HeroContent/HeroText";
+import "../Components/HeroContent/Hero.css";
 
 function Hero() {
   return (
-    <div className="hero-container bg-greenbg text-white h-129" id="home">
-      <DesktopNav />
-      <MobileNav />
-      <HeroText />
+    <div className="hero-section bg-greenbg text-white h-129" id="home">
+      <div className="hero-container overlay">
+        <DesktopNav />
+        <MobileNav />
+        <HeroText />
+      </div>
     </div>
   );
 }

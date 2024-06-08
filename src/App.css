@@ -2,24 +2,477 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html{
-  scroll-behaviour:smooth;
+html {
+  scroll-behaviour: smooth;
+}
+.visually-hidden{
+  position:absolute;
+  left:-9999px; 
+  z-index:999;
+  padding:1em;
+  background-color:black;
+  color: #fff;
+  opacity:0
+  padding: 8px;
+  text-decoration: none;
+}
+
+.visually-hidden:focus {
+  left:50%;
+  transform:translateX(-50%)
+  opacity:1
 }
 .mw {
   max-width: 85%;
 }
-.border-6{
-  border-width:6px;
+.border-6 {
+  border-width: 6px;
 }
-.w-86{
-  width:50%;
+
+.spinner-box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline:auto;
+  margin-top:30%;
+  background-color: transparent;
 }
-.slideOne-img{
-  wdth:900px;
-  height:500px;
+/* PULSE BUBBLES */
+.pulse-container {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-/* Custom underline style for the h1 element */
-/* .underline-custom {
-  position: relative;
-  display: inline-block;
-} */
+.pulse-bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #244034;
+}
+.pulse-bubble-1 {
+    animation: pulse .4s ease 0s infinite alternate;
+}
+.pulse-bubble-2 {
+    animation: pulse .4s ease .2s infinite alternate;
+}
+.pulse-bubble-3 {
+    animation: pulse .4s ease .4s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .25;
+    transform: scale(.75);
+  }
+}
+/* guideline styling */
+.guideline-container {
+  padding-block: 8rem;
+}
+.guidelines-content {
+  margin-top: 48px;
+  margin-bottom: 80px;
+}
+.gc-container {
+  background-color: #eef3ff;
+}
+.slide-content p,
+span,
+li {
+  font-size: 14px;
+}
+.guideline-container .top p > span:first-child {
+  display: none;
+}
+.w-86 {
+  width: 55%;
+}
+.slide-content {
+  padding-inline: 3rem;
+}
+.slide-content h3 {
+  font-size: 20px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+.gc-line {
+  margin-block: 16px;
+}
+.slide-content li {
+  line-height: 24px;
+}
+.discover {
+  line-height: 40.8px;
+}
+.slide-img {
+  width: 500px;
+  height: 420px;
+  border-radius: 16px;
+  display: flex;
+}
+.gc-content {
+  height: 420px;
+}
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+.slide {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* about styling */
+.about-container {
+  padding-block: 5rem;
+}
+.about-section {
+  background-color: #eef3ff;
+}
+.a-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  border: 1px solid #ececec;
+  transition: all ease 0.5s;
+}
+.a-card:nth-child(2) {
+  border: 0;
+}
+.a-card:hover {
+  box-shadow: none;
+}
+.card-container p {
+  line-height: 22px;
+}
+/* category styling */
+.c-container {
+  padding-block-start: 8rem;
+  padding-block-end: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.c-container h3 {
+  font-weight: 600;
+}
+.c-container .left-container h2 {
+  line-height: 32px;
+}
+.category-img {
+  width: 400px;
+  height: 300px;
+}
+.job-categories p,
+.job p {
+  line-height: 24px;
+}
+/* featuredjob styling */
+.featured-container {
+  padding-bottom: 50px;
+}
+.filter-list {
+  margin-top: 20px;
+  margin-bottom: 39px;
+}
+.filter-btn {
+  padding-block: 8px;
+  padding-inline: 26px;
+}
+.filter-btn:first-child {
+  width: 5.2rem;
+  height: 2.4rem;
+}
+.filter-btn:hover:not(:first-child) {
+  background-color: #244034;
+  color: white;
+  transition: all ease 0.8s;
+}
+.job {
+  width: 19rem;
+  height: 16rem;
+  padding-block: 28px;
+  padding-inline: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffff;
+  border-radius: 18px;
+}
+.job:first-child {
+  background-color: #244034;
+  color: white;
+}
+.job span.icon {
+  background-color: #eaeaea;
+}
+.job:hover span.icon {
+  background-color: white;
+}
+.job:first-child span.icon {
+  background-color: white;
+}
+.job:not(:first-child) {
+  border: 2px solid #ececec;
+}
+.job:hover:not(:first-child),
+.job.active {
+  background-color: #244034;
+  color: white;
+  transition: all ease-in 0.4s;
+  border: 0;
+  cursor: pointer;
+}
+.job h3,
+h4 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.job p {
+  font-size: 14px;
+}
+/* blog styling */
+.blog-cards {
+  margin-top: 1rem;
+}
+.blog-cards .main-img img {
+  height: 25rem;
+}
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+}
+.group:hover .img-overlay {
+  left: 0;
+}
+
+.list-content h3{
+  margin-top: 4px;
+  line-height:20px;
+}
+/* testimonials */
+.testimonials-container h2{
+  max-width:35%
+}
+.testimonials-container p{
+  line-height:22px;
+}
+.feedback:first-child{
+  background-color: #244034;
+  color: white;
+}
+.feedback:first-child p{
+  color:white;
+}
+.feedback:hover:not(:first-child){
+  background-color: #244034;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+.feedback:hover:not(:first-child) p{
+    color: white;
+}
+/* cta */
+.cta-container {
+  max-width:82%;
+}
+.cta-container h2{
+  max-width:50%;
+}
+/* footer */
+.f-container input{
+  width:380px;
+  height:2.8rem;
+}
+.f-container input-btn{
+  height:2.8rem;
+}
+.f-container input-btn:hover{
+  background-color:green
+}
+.s-icon{
+  transition:background-color 0.3s ease;
+}
+.s-icon:hover{
+  background-color:rgba(255,255,0.5)
+}
+@media screen and (max-width: 948px) {
+  /* guidelines styling */
+  .mw {
+    max-width: 90%;
+  }
+  .guideline-container .top h2 {
+    font-size: 26px;
+    line-height: 30.8px;
+  }
+  .guideline-container .top p > span:last-child {
+    display: none;
+  }
+  .gc-content {
+    height: 300px;
+  }
+  .slide-img {
+    width: 350px;
+    height: 300px;
+    border-radius: 16px;
+    display: flex;
+    justify-item: flex-start;
+  }
+  .slide-content {
+    padding: 1rem;
+  }
+  .slide-content h3 {
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 4px;
+  }
+  .gc-line {
+    margin-block: 12px;
+  }
+  .slide-content p,
+  li,
+  span {
+    font-size: 13px;
+  }
+  .slide-content li {
+    line-height: 20px;
+  }
+  .slides-container p {
+    font-size: 13px !important;
+  }
+  .slides-container span,
+  h4 {
+    font-size: 14px;
+  }
+  /* about styling */
+  .about-container p, .blog-cards p {
+    font-size: 14px;
+  }
+  .about-container h2 {
+    font-size: 26px;
+  }
+  .about-container h3 {
+    font-size: 16px;
+  }
+  /* category */
+  .c-container {
+    padding-block-start: 26px;
+    padding-block-end: 50px;
+  }
+  .c-container h2 {
+    font-size: 26px;
+  }
+  .right-container {
+    display: none;
+  }
+  .job-categories h3, .blog-list h3 {
+    font-size: 15px;
+  }
+  /* featuredjob styling */
+  .filter-btn {
+    padding-block: 6px;
+    padding-inline: 16px;
+  }
+  /* blog */
+  .blog-cards .main-img img {
+    height: auto;
+  }
+  .blog-list{
+    margin-top:2rem
+  }
+  /* cta */
+  .cta-container h2{
+    max-width:84%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mw {
+    max-width: 90%;
+  }
+  /* guideline styling */
+  .guideline-container {
+    padding-block: 4rem;
+  }
+  .slide-img,
+  .slides-container {
+    display: none;
+  }
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 0.9rem;
+    padding-block: 1rem;
+  }
+  .guidelines-content {
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+  .guideline-container .top p {
+    display: none;
+  }
+  .gc-content {
+    height: auto;
+  }
+  /* about styling */
+  .about-section {
+    background-color: inherit;
+  }
+  .about-container {
+    padding-top: 0;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+  .a-card {
+    padding: 38px 14px;
+  }
+  /* featured */
+  .featured-container h2 {
+    font-size: 26px;
+  }
+  .filter-btn {
+    padding-block: 4px;
+    padding-inline: 8px;
+  }
+  .filter-btn:first-child {
+    width: 3.8rem;
+    height: 2.2rem;
+  }
+  .job{
+    width:auto;
+  }
+  .job-list-container {
+    margin-top:1.2rem;
+  }
+  .job:nth-child(5),.job:nth-child(6){
+    display:none
+  }
+}
+@media screen and (max-width: 500px) {
+  .mw {
+    max-width: 95%;
+  }
+  .c-container h2 {
+    width: 400px;
+  }
+  .filter-list {
+    display: none;
+  }
+  /* category stylying */
+}

@@ -1,0 +1,204 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* hero section styling */
+.hb-container{
+  position:relative;
+  display:flex;
+  flex-grow:1;
+  align-items:center;
+  justify-content:center;
+  gap:64px;
+  padding-top:56px;
+}
+.lhb-main .h-icons{
+  display:none;
+}
+.lhb-text{
+  margin-bottom:74px;
+}
+.lhb-text p{
+  line-height:24px;
+}
+.lhb-text h2 {
+  line-height: 43.4px;
+  max-width:500px;
+}
+.lhb-input {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-left:16px;
+  width: 43rem;
+  height:56px;
+  position:absolute;
+  bottom:76px;
+  left:0;
+  right:0;
+  font-size:14px;
+}
+.input-logo{
+  width:24px;
+  height:24px
+}
+.search-btn{
+  padding-inline:32px;
+  padding-block:8px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.right-hb img {
+  width: 1250px;
+  height: 400px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+/* Background pattern for lines */
+.bg-pattern {
+  background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.1) 75%,
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.1) 75%,
+      rgba(255, 255, 255, 0.1)
+    );
+  background-size: 7px 7px;
+  background-position: 0 0, 10px 10px;
+}
+.action-btn{
+  display:none;
+}
+@media screen and (max-width: 1078px) {
+  .h-129 {
+    height: auto;
+  }
+  .lhb-input {
+    width: 36rem;
+    bottom:42px;
+  }
+  .pattern-container {
+    transform: translateX(-20px);
+    top: 10px;
+  }
+  .right-hb img {
+    width: 1300px;
+    height: 330px;
+  }
+}
+@media screen and (max-width: 948px) {
+  .lhb-text h2{
+    width:auto;
+    line-height:2rem;
+    font-size:26px;
+  }
+  .lhb-text p > slot{
+    display:none
+  }
+  .lhb-input {
+    width: 28rem;
+    font-size:12px
+  }
+  .right-hb img {
+    width: 800px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .h-129 {
+    height: 430px;
+  }
+  .hero-section {
+    position: relative;
+    width: 100%;
+    background: url("./hImg.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 64, 52, 0.88);
+  }
+  .hb-container {
+    gap:0px;
+    padding-top:60px;
+  }
+   .lhb-text{
+    text-align:center;
+    margin:auto;
+    width:450px;
+    padding-block-start:.8rem;
+  }
+  .lhb-main .h-icons{
+    display:grid;
+  }
+  .lhb-text h2 {
+    font-size: 32px;
+    line-height: 37.4px;
+  }
+  .lhb-text p {
+    line-height: 23.8px;
+    font-size: 14px;
+  }
+  .lhb-text p > slot {
+    display: none;
+  }
+  .lhb-input{
+    margin-inline-end:auto;
+    margin-block-start:22px;
+    width:auto;
+    position:relative;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  .right-hb img {
+    display:none;
+  }
+  
+}
+@media screen and (max-width: 500px) {
+  .m-logo a{
+    font-size:16px;
+  }
+  .lhb-main .h-icons{
+    display:none;
+  }
+  .lhb-text h2 {
+    line-height: auto;
+  }
+  .lhb-input {
+    display:none;
+  }
+  .action-btn{
+    display:flex;
+  }
+
+}
+@media screen and (max-width:350px){
+   .mw{
+    width:320px;
+  }
+   .lhb-text {
+    width:300px;
+  }
+  .lhb-text h2{
+    font-size:22px;
+    line-height:28px;
+  }
+  .lhb-text{
+    padding-block:.4rem;
+  }
+}

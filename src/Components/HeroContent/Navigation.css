@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.DesktopNav{
+    display:flex;
+}
+.NavLinks ul li a {
+  transition: 0.5ms ease-out;
+  &:hover {
+    color: white;
+  }
+}
+.MobileNav {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .DesktopNav {
+    display: none;
+  }
+  .MobileNav {
+    display: flex;
+    align-items: center;
+  }
+  /* the mobile nav toggling */
+  .HamburgerMenu {
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+  }
+  .NavLinks{
+    transition:top ease-in-out 3s
+  }
+  .Navlinks ul li:hover{
+    color:white;
+    transition:color ease-out .5s;
+  }
+ 
+}

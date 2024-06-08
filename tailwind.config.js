@@ -7,7 +7,8 @@ export default {
         "faint":"#EAEAEA",
         "greenbg":"#244034",
         "activebtn":"#D2F34C",
-        "ash":"#808080"
+        "ash":"#424242",
+        "lightBlue":"#EEF3FF",
       },
       fontFamily:{
         Lexend:["Lexend", "sans-serif"],
@@ -15,7 +16,6 @@ export default {
         Inter:["Inter", "sans-serif"]
       },
       fontSize:{
-        "xxs":"8px",
         "dd": "13px",
         "md": "16px"
       },

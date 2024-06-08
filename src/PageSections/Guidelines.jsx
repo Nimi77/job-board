@@ -1,114 +1,166 @@
+import { useState, useEffect  } from "react";
 import "../App.css";
+import { FaCheckCircle } from "react-icons/fa";
+
+const guidelines = [
+  {
+    id: 1,
+    title: "Create a Profile",
+    content:
+      "Sign up for an account and create a profile that highlights your skills and experience.",
+    details: [
+      "Upload professional photo: Ensure your profile picture is clear, well-lit and represents you professionally.",
+      "Write a concise bio: Include key information about yourself, such as your background, skills and interests.",
+      "Keep information up-to-date: Regularly update your profile with new achievements, skills or experiences.",
+    ],
+    image: "../Guideline1.jpg",
+  },
+  {
+    id: 2,
+    title: "Search for Jobs",
+    content:
+      "Use our search functions to find job listings that match your criteria.",
+    details: [
+      "Upload professional photo: Ensure your profile picture is clear, well-lit and represents you professionally.",
+      "Write a concise bio: Include key information about yourself, such as your background, skills and interests.",
+      "Keep information up-to-date: Regularly update your profile with new achievements, skills or experiences.",
+    ],
+    image: "../Guideline2.jpg",
+  },
+  {
+    id: 3,
+    title: "Apply for Jobs",
+    content: "Submit your application directly through our platform.",
+    details: [
+      "Set up your CV: Prepare a tailored resume and cover letter for each application for every job position.",
+      "Skills & Experience: Highlight your skills and experiences that match the job requirements for chances. ",
+      "Consistency: Follow up on your applications to show interest and enthusiasm, work on this through emails.",
+    ],
+    image: "../Guideline3.jpg",
+  },
+  {
+    id: 4,
+    title: "Get Hired",
+    content:
+      "Our team of job experts will guide you through the interview process.",
+    details: [
+      "Interviews: Prepare for interviews by practicing common questions and knowing possible questions.",
+      "Time Conscious: Dress professionally and arrive on time for your interview even if the interview is virtual.",
+      "Regards: Follow up with a thank you note to express your appreciation and the oppourtunity.Good Luck",
+    ],
+    image: "../Guideline4.jpg",
+  },
+];
+
 function UserGuidelines() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % guidelines.length);
+    }, 5000); // Change content every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentGuideline = guidelines[currentIndex];
+
   return (
-    <div className="py-32">
+    <div className="guideline-section">
       <div className="guideline-container font-Poppins mx-auto mw flex flex-col justify-center">
-        <div role="heading" className="flex items-center justify-item-between justify-between font-Lexend">
-          <h2 className=" text-2xl font-semibold">
+        {/* guidelines heading */}
+        <div
+          role="heading"
+          className="top flex items-center justify-item-center font-Lexend"
+        >
+          <h2 className="discover text-3xl font-semibold">
             Discover Endless Career Oppourtunities
           </h2>
-          <p className=" w-86 text-ash">
+          <p className="w-86 text-ash">
             This platform is created for you to find the perfect job
-            oppourtunities tailored to your skills and aspirations discover your
-            next career move in JobBoard.
+            oppourtunities<span>.</span> <span className="text-md">tailored to your skills and aspirations discover your
+            next career move in JobBoard.</span>
           </p>
         </div>
-        <div className="guildines-content mt-9 mb-12">
-          <div className="gc-container flex items-center justify-center bg-slate-400">
-            {/* slide one content */}
-            <div className="ContentOne flex">
-              <img src="../Guideline1.jpg" className="slideOne-img rounded-md" ></img>
-              <div className="slideOne-content px-4 py">
-                <span className="font-medium pb-3">01</span>
+
+        {/* guidelines content */}
+        <div className="guidelines-content mb-20">
+          <div className="gc-container flex flex-col items-center justify-center bg-lightBlue rounded-2xl">
+            {/* content */}
+            <div className="gc-content flex items-center">
+              <img
+                src={currentGuideline.image}
+                alt={currentGuideline.title}
+                className="slide-img"
+              />
+              <div className="slide-content">
+                <span className="font-medium text-lg">
+                  {String(currentGuideline.id).padStart(2, "0")}
+                </span>
                 <div>
-                  <h3 className="font-semibold text-lg ">Create a Profile</h3>
-                  <p className="py-3">
-                    Sign up for an account and create a profile that highlights
-                    your skills and experience.
-                  </p>
-                  <div className="border w-full border-gray-300"></div>
-                  <ul className="space-y-4">
-                    <li className="flex items-center gap-2">
-                      <span className=""></span>
-                      <span>Use a clear and professional photo:</span> 
-                      Ensure your profile picture is clear, well-lit and represents you professionally. 
-                      Avoid using group photos or casual images.
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className=""></span>
-                      <span className="font-semibold">Write a concise and informative bio:</span> 
-                      Include key information about yourself, such as your background, skills and interests,
-                      in a brief and engaging manner. Highlight what makes you unique and relevant to the context of the website.
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className=""></span>
-                      <span className="font-semibold">Keep information up-to-date:</span> 
-                      Regurlarly update your profile with new achievements, skills or experiences to keep it
-                      current and relevant. This shows that you are active and engaged.
-                    </li>
-                  </ul>
+                  <h3 className="font-semibold ">
+                    {currentGuideline.title}
+                  </h3>
+                  <p>{currentGuideline.content}</p>
+                  <div className="border w-full border-gray-300 gc-line"></div>
                 </div>
+                <ul className="space-y-3">
+                  {currentGuideline.details.map((detail, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center justify-center gap-4"
+                    >
+                      <FaCheckCircle size={26} className="check-icon" />
+                      <li className="text-ash">
+                        <span className="font-semibold text-black">
+                          {detail.split(":")[0]}:
+                        </span>
+                        {detail.split(":")[1]}
+                      </li>
+                    </div>
+                  ))}
+                </ul>
               </div>
             </div>
-            {/* slide two content */}
-            <div></div>
-            {/* slide three content */}
-            <div></div>
           </div>
         </div>
-        <div className="guildlines-slides">
-          <div className="slides-container flex items-center justify-center gap-2">
-            {/* slide one */}
-            <div className="slideOne active">
-              <div className="border border-slate-950 mb-4"></div>
-              <div className="flex flex-col gap-2">
-                <span className="font-medium">01</span>
-                <h4 className="font-semibold">Create a Profile</h4>
-                <p className="text-sm text-ash">
-                  Sign up for an account and create a profile that highlights
-                  your skills and experience.
-                </p>
+        {/* bottom slides */}
+        <div className="guidelines-slides">
+          <div className="slides-container flex items-center justify-center gap-6">
+            {guidelines.map((guideline, index) => (
+              <div
+                key={guideline.id}
+                className={`slide ${currentIndex === index ? "active" : ""}`}
+                onClick={() => setCurrentIndex(index)}
+              >
+                <div className={`border mb-4 ${currentIndex === index ? "border-slate-950":"border-[#808080]"}`}></div>
+                <div className="flex flex-col gap-2">
+                  <span className={`font-medium text-md ${
+                      currentIndex === index ? "text-black" : "text-[#808080]"
+                    }`}>
+                    {String(guideline.id).padStart(2, "0")}
+                  </span>
+                  <h4
+                    className={`font-medium ${
+                      currentIndex === index ? "text-black" : "text-[#808080]"
+                    }`}
+                  >
+                    {guideline.title}
+                  </h4>
+                  <p
+                    className={`text-sm ${
+                      currentIndex === index ? "text-black" : "text-[#808080]"
+                    }`}
+                  >
+                    {guideline.content}
+                  </p>
+                </div>
               </div>
-            </div>
-            {/* slide two */}
-            <div className="slideTwo">
-              <div className="border border-gray-400 mb-4"></div>
-              <div className="flex flex-col gap-2 text-ash">
-                <span className="font-medium">02</span>
-                <h4 className="font-semibold">Search for jobs</h4>
-                <p className="text-sm">
-                  Use our search functions to find job listings that match your
-                  criteria.
-                </p>
-              </div>
-            </div>
-            <div className="slideThree">
-              <div className="border border-gray-400"></div>
-              <div className="flex flex-col gap-3 text-faint">
-                <span className="font-medium">03</span>
-                <h4 className="font-semibold">Apply to jobs</h4>
-                <p className="text-sm">
-                  Use your search functions to find job listings that match your
-                  criteria.
-                </p>
-              </div>
-            </div>
-            <div className="slideFour">
-              <div className="border border-gray-400"></div>
-              <div className="flex flex-col gap-3 text-faint">
-                <span className="font-medium">04</span>
-                <h4 className="font-semibold">Get Hired</h4>
-                <p className="text-sm">
-                  Our team of job experts will guide you through the interview process.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
 }
-export default UserGuidelines;
 
-<script></script>;
+export default UserGuidelines;
