@@ -97,7 +97,7 @@ function FeaturedJob() {
           </div>
         </div>
         <div className="job-list mx-auto">
-          <div className="job-list-container grid grid-cols-2 ml-0  lg:grid-cols-3 lg:gap-8 md:ml-4 md:grid-cols-2 gap-2 ">
+          <div className="job-list-container grid grid-cols-2 ml-0  lg:grid-cols-3 lg:gap-8  md:grid-cols-2 gap-6 ">
             {filteredJobs.map((job) => (
               <div
                 key={job.id}

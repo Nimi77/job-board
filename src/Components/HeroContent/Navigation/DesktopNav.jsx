@@ -82,7 +82,7 @@ const DesktopNav = () => {
           </ul>
         </div>
         <div className="flex items-center justify-center">
-          <button className="px-6 py-3 rounded-full text-sm bg-activebtn text-black">
+          <button className="d-btn px-6 py-3 rounded-full text-sm bg-activebtn text-black">
             Get Started
           </button>
         </div>

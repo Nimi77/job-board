@@ -5,72 +5,11 @@
 html {
   scroll-behaviour: smooth;
 }
-.visually-hidden{
-  position:absolute;
-  left:-9999px; 
-  z-index:999;
-  padding:1em;
-  background-color:black;
-  color: #fff;
-  opacity:0
-  padding: 8px;
-  text-decoration: none;
-}
-
-.visually-hidden:focus {
-  left:50%;
-  transform:translateX(-50%)
-  opacity:1
-}
 .mw {
   max-width: 85%;
 }
 .border-6 {
   border-width: 6px;
-}
-
-.spinner-box {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-inline:auto;
-  margin-top:30%;
-  background-color: transparent;
-}
-/* PULSE BUBBLES */
-.pulse-container {
-  width: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.pulse-bubble {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #244034;
-}
-.pulse-bubble-1 {
-    animation: pulse .4s ease 0s infinite alternate;
-}
-.pulse-bubble-2 {
-    animation: pulse .4s ease .2s infinite alternate;
-}
-.pulse-bubble-3 {
-    animation: pulse .4s ease .4s infinite alternate;
-}
-
-@keyframes pulse {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: .25;
-    transform: scale(.75);
-  }
 }
 /* guideline styling */
 .guideline-container {
@@ -192,10 +131,12 @@ li {
   width: 5.2rem;
   height: 2.4rem;
 }
-.filter-btn:hover:not(:first-child) {
+.filter-btn:hover:not(:first-child),
+.filter-btn:focus:not(:first-child) {
   background-color: #244034;
   color: white;
   transition: all ease 0.8s;
+  outline:none;
 }
 .job {
   width: 19rem;
@@ -245,7 +186,7 @@ h4 {
 .blog-cards {
   margin-top: 1rem;
 }
-.blog-cards .main-img img {
+ .main-blog img {
   height: 25rem;
 }
 .img-overlay {
@@ -261,62 +202,138 @@ h4 {
   left: 0;
 }
 
-.list-content h3{
+.list-content h3 {
   margin-top: 4px;
-  line-height:20px;
+  line-height: 20px;
 }
 /* testimonials */
-.testimonials-container h2{
-  max-width:35%
+.testimonials-container h2 {
+  max-width: 35%;
 }
-.testimonials-container p{
-  line-height:22px;
+.testimonials-container p {
+  line-height: 22px;
 }
-.feedback:first-child{
+.testimonials-container button {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 20px;
+}
+.testiomial-card {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.feedback:first-child {
   background-color: #244034;
   color: white;
 }
-.feedback:first-child p{
-  color:white;
+.feedback:first-child p {
+  color: white;
 }
-.feedback:hover:not(:first-child){
+.feedback:hover:not(:first-child) {
   background-color: #244034;
   color: white;
   transition: all 0.3s ease-in;
 }
-.feedback:hover:not(:first-child) p{
-    color: white;
+.feedback:hover:not(:first-child) p {
+  color: white;
 }
 /* cta */
 .cta-container {
-  max-width:82%;
+  height: 16rem;
+  padding-inline:4rem;
+  padding-block:4rem;
+  display: flex;
+  align-items: center;
+  justify: center;
+  background-color:#cff72b;
+  max-width: 82%;
 }
-.cta-container h2{
-  max-width:50%;
+.cta-container h2 {
+  width: 50%;
+  line-height: 40px;
+}
+.cta-container button {
+  width: 9.8rem;
+  height: 3.5rem;
+  background-size: 100% auto;
+  border: none;
+  background: linear-gradient(to right, #f0f0f0, white);
+}
+.cta-container button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
 }
 /* footer */
-.f-container input{
-  width:380px;
-  height:2.8rem;
+.input-wrapper input {
+  width: 380px;
+  height: 2.8rem;
 }
-.f-container input-btn{
-  height:2.8rem;
+.input-btn {
+  height: 2.8rem;
+  position: absolute;
+  padding-inline: 24px;
+  padding-block: 12.6px;
+  right: 0.9px;
 }
-.f-container input-btn:hover{
-  background-color:green
+.input-btn:hover {
+  background-color: #cff72b;
 }
-.s-icon{
-  transition:background-color 0.3s ease;
+.s-icon {
+  padding: 6px 5px;
+  transition: background-color 0.3s ease;
 }
-.s-icon:hover{
-  background-color:rgba(255,255,0.5)
+.s-icon:hover {
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  color: black;
+}
+.middle2 li a:hover {
+  cursor: pointer;
+}
+.fb-content a {
+  cursor: pointer;
+}
+.fb-content a:hover {
+  color: white;
+}
+.fb-content a,
+.fb-content span {
+  font-size: 14px;
+}
+@media screen and (max-width: 1078px) {
+  .cta-container h2 {
+    width: 58%;
+    line-height: 40px;
+  }
+  .cta-container {
+    height: 16rem;
+    padding-inline:2rem;
+    padding-block:2rem;}
 }
 @media screen and (max-width: 948px) {
   /* guidelines styling */
   .mw {
     max-width: 90%;
   }
-  .guideline-container .top h2 {
+  .guideline-container .top h2,
+  .testimonials-container h2 {
     font-size: 26px;
     line-height: 30.8px;
   }
@@ -360,7 +377,8 @@ h4 {
     font-size: 14px;
   }
   /* about styling */
-  .about-container p, .blog-cards p {
+  .about-container p,
+  .blog-cards p {
     font-size: 14px;
   }
   .about-container h2 {
@@ -380,7 +398,10 @@ h4 {
   .right-container {
     display: none;
   }
-  .job-categories h3, .blog-list h3 {
+  .job-categories h3,
+  .blog-list h3,
+  .blog-cards h3,
+  .feedback h3 {
     font-size: 15px;
   }
   /* featuredjob styling */
@@ -389,15 +410,23 @@ h4 {
     padding-inline: 16px;
   }
   /* blog */
-  .blog-cards .main-img img {
-    height: auto;
+  .blog-cards {
+    flex-direction:column;
   }
-  .blog-list{
-    margin-top:2rem
+  .blog-cards .side-cards {
+    margin-top: 2rem;
+  }
+  .side-cards p,
+  .testimonials-container p{
+    font-size: 12px;
+  }
+  /* testimonials */
+  .testimonials-container button {
+    font-size: 18px;
   }
   /* cta */
-  .cta-container h2{
-    max-width:84%;
+  .cta-container h2 {
+    max-width: 84%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -417,7 +446,7 @@ h4 {
     flex-direction: column;
     justify-content: center;
     padding-inline: 0.9rem;
-    padding-block: 1rem;
+    padding-block: 1.6rem;
   }
   .guidelines-content {
     margin-top: 32px;
@@ -440,10 +469,11 @@ h4 {
     flex-direction: column;
   }
   .a-card {
-    padding: 38px 14px;
+    padding: 38px px;
   }
   /* featured */
-  .featured-container h2 {
+  .featured-container h2,
+  .testimonials-container h2 {
     font-size: 26px;
   }
   .filter-btn {
@@ -454,17 +484,66 @@ h4 {
     width: 3.8rem;
     height: 2.2rem;
   }
-  .job{
-    width:auto;
+  .job {
+    width: auto;
   }
   .job-list-container {
-    margin-top:1.2rem;
+    margin-top: 1.2rem;
   }
-  .job:nth-child(5),.job:nth-child(6){
-    display:none
+  .job:nth-child(5),
+  .job:nth-child(6) {
+    display: none;
+  }
+  .job p{
+    font-size:13px;
+  }
+  /* testimonial */
+  .testimonials-container h2 {
+    max-width: 100%;
+    text-align: left;
+  }
+  .testiomial-card {
+    flex-direction: column;
+  }
+  .testimonials-container button {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .feedback {
+    width: 100%;
+  }
+  .main-blog img {
+    height:20rem;
+    width:40rem
+  }
+  /* cta */
+  .cta-container {
+    max-width: 89%;
+    padding-inline: 14px;
+    padding-block: 10px !important;
+  }
+  .cta-container h2 {
+    font-size: 26px;
+    width: 100%;
+    line-height: 36px;
+  }
+  .cta-container > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-container > div > button {
+    width: 8rem;
+    height: 3rem;
+  }
+  /* footer */
+  .logo a {
+    font-size: 16px;
+  }
+  .middle2 {
+    display: none;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 684px) {
   .mw {
     max-width: 95%;
   }
@@ -474,5 +553,46 @@ h4 {
   .filter-list {
     display: none;
   }
-  /* category stylying */
+  /* cta */
+  .cta-container {
+    max-width: 90%;
+    padding-inline: 12px !important;
+    padding-block: 14px;
+  }
+  .cta-container  h2{
+    line-height: 32px;
+   }
+  /* footer stylying */
+  .f-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .fb-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .fb-content a,
+  .fb-content span {
+    font-size: 12px;
+  }
+
+}
+@media screen and (max-width: 450px) {
+  .job {
+    width: auto;
+    height: 14rem;
+    padding-block: 28px;
+    padding-inline: 10px;
+  }
+  .job p{
+    line-height:20px;
+  }
+  .job-list-container{
+    gap:6px;
+  }
+   .cta-container > div h2 {
+    font-size: 22px;
+  }
+
 }

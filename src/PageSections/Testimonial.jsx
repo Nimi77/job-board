@@ -61,58 +61,59 @@ function Testimonial() {
     currentPage * itemsPerPage,
     (currentPage + 1) * itemsPerPage
   );
+
   return (
-    <div className="testimonial-section py-36">
-      <div className="testimonials-container mw mx-auto">
-        <div role="heading" className="font-Lexend mb-6 flex justify-between">
-          <h2 className="text-3xl font-semibold">
-            What Our Worker Think About
+    <div className="testimonial-section py-20 sm:py-24 md:py-36">
+      <div className="testimonials-container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div role="heading" className="font-Lexend mb-6 flex  justify-between items-center">
+          <h2 className="text-3xl  font-semibold mb-4 sm:mb-0 text-center sm:text-left">
+            What Our Workers Think About
           </h2>
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrev}
-              className="w-10 h-10 flex items-center justify-center bg-faint shadow-lg rounded-full hover:bg-gray-300 disabled:opacity-50"
+              className="flex items-center justify-center bg-gray-300 shadow-lg rounded-full hover:bg-gray-400 disabled:opacity-50"
               disabled={currentPage === 0}
             >
-              <FaArrowLeft size={20}/>
+              <FaArrowLeft/>
             </button>
             <button
               onClick={handleNext}
-              className="w-10 h-10 flex items-center justify-center bg-greenbg  text-white shadow-lg rounded-full hover:bg-gray-500 disabled:opacity-50"
+              className="flex items-center justify-center bg-green-600 text-white shadow-lg rounded-full hover:bg-green-700 disabled:opacity-50"
               disabled={currentPage === totalPages - 1}
             >
-              <FaArrowRight size={20}/>
+              <FaArrowRight />
             </button>
           </div>
         </div>
-        <div className="flex justify-center gap-4 overflow-x-auto font-Poppins"> 
-          {/* //flex flex-wrap justify-center md:justify-start overflow-x-auto */}
-        {currentTestimonials.map(testimonial => (
-          <div 
-            key={testimonial.id} 
-            className="feedback sm:w-1/2 lg:w-1/3 border border-faint bg-white rounded-lg  p-6 relative mx-2 md:mx-4">
-            <div className="mb-4 flex gap-2 justify-start">
-              <img 
-                src={testimonial.image} 
-                alt={testimonial.name} 
-                className="w-12 h-12 rounded-full mb-2"
-              />
-              <div className="text-left">
-                <h3 className="text-md font-semibold">{testimonial.name}</h3>
-                <p className="text-sm text-gray-500">{testimonial.role}</p>
+        <div className="testiomial-card">
+          {currentTestimonials.map(testimonial => (
+            <div 
+              key={testimonial.id} 
+              className="feedback w-full  border border-gray-200 bg-white rounded-lg p-4 md:p-6 relative font-Poppins"
+            >
+              <div className="mb-4 flex items-center gap-4">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name} 
+                  className="w-12 h-12 rounded-full"
+                />
+                <div className="text-left">
+                  <h3 className="text-md font-semibold">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-700">{testimonial.text}</p>
+              <div className="text-left mt-4 text-xl text-yellow-500">
+                {/* Rating stars */}
+                {'★'.repeat(testimonial.rating).padEnd(5, '☆')}
               </div>
             </div>
-            <p className="text-sm text-gray-700">{testimonial.text}</p>
-            <div className="text-left mt-4 text-xl text-yellow-500">
-              {/* Rating stars */}
-              {'★'.repeat(testimonial.rating).padEnd(5, '☆')}
-            </div>
-          </div>
-        ))}
-     
+          ))}
         </div>
       </div>
     </div>
   );
 }
+
 export default Testimonial;

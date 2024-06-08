@@ -28,7 +28,6 @@ function App() {
   }
   return (
     <div>
-      <a href="#main" className="visually-hidden" aria-hidden="true">Skip To Main Content</a>
       <Hero />
       <UserGuidelines/>
       <About />

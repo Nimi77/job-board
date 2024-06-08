@@ -2,9 +2,23 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.DesktopNav{
-    display:flex;
+.DesktopNav {
+  display: flex;
 }
+.d-btn {
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all 0.6s ease;
+}
+.d-btn:hover {
+  background-color:#cff72b;
+  box-shadow: 0 10px 15px -9px #ecff9e, 0 4px 6px -2px #488aec17;
+}
+.d-btn:focus,
+.d-btn:active {
+  opacity: 0.85;
+  box-shadow: none;
+}
+
 .NavLinks ul li a {
   transition: 0.5ms ease-out;
   &:hover {
@@ -28,12 +42,11 @@
     right: 3%;
     cursor: pointer;
   }
-  .NavLinks{
-    transition:top ease-in-out 3s
+  .NavLinks {
+    transition: top ease-in-out 3s;
   }
-  .Navlinks ul li:hover{
-    color:white;
-    transition:color ease-out .5s;
+  .Navlinks ul li:hover {
+    color: white;
+    transition: color ease-out 0.5s;
   }
- 
 }

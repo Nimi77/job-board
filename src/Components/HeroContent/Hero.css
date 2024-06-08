@@ -48,6 +48,9 @@
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
+.search-btn:hover{
+  background-color:#cff72b;
+}
 .right-hb img {
   width: 1250px;
   height: 400px;
