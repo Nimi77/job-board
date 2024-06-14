@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NavLink from "./NavLink";
+import NavLink from "./MobileNavLink";
 import { MdOutlineMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 import "../Navigation.css";

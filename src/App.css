@@ -11,8 +11,8 @@ html {
 .border-6 {
   border-width: 6px;
 }
-/* guideline styling */
-.guideline-container {
+/* about styling */
+.about-container {
   padding-block: 8rem;
 }
 .guidelines-content {
@@ -27,7 +27,7 @@ span,
 li {
   font-size: 14px;
 }
-.guideline-container .top p > span:first-child {
+.about-container .top p > span:first-child {
   display: none;
 }
 .w-86 {
@@ -67,12 +67,12 @@ li {
   cursor: pointer;
 }
 
-/* about styling */
-.about-container {
-  padding-block: 5rem;
-}
-.about-section {
+/* services styling */
+.services-section {
   background-color: #eef3ff;
+}
+.services-container {
+  padding-block: 5rem;
 }
 .a-card {
   display: flex;
@@ -332,12 +332,12 @@ h4 {
   .mw {
     max-width: 90%;
   }
-  .guideline-container .top h2,
+  .about-container .top h2,
   .testimonials-container h2 {
     font-size: 26px;
     line-height: 30.8px;
   }
-  .guideline-container .top p > span:last-child {
+  .about-container .top p > span:last-child {
     display: none;
   }
   .gc-content {
@@ -376,15 +376,15 @@ h4 {
   h4 {
     font-size: 14px;
   }
-  /* about styling */
-  .about-container p,
+  /* services styling */
+  .services-container p,
   .blog-cards p {
     font-size: 14px;
   }
-  .about-container h2 {
+  .services-container h2 {
     font-size: 26px;
   }
-  .about-container h3 {
+  .services-container h3 {
     font-size: 16px;
   }
   /* category */
@@ -433,8 +433,8 @@ h4 {
   .mw {
     max-width: 90%;
   }
-  /* guideline styling */
-  .guideline-container {
+  /* about styling */
+  .about-container {
     padding-block: 4rem;
   }
   .slide-img,
@@ -452,24 +452,24 @@ h4 {
     margin-top: 32px;
     margin-bottom: 0;
   }
-  .guideline-container .top p {
+  .about-container .top p {
     display: none;
   }
   .gc-content {
     height: auto;
   }
-  /* about styling */
-  .about-section {
+  /* services styling */
+  .services-section {
     background-color: inherit;
   }
-  .about-container {
+  .services-container {
     padding-top: 0;
   }
   .card-container {
     flex-direction: column;
   }
   .a-card {
-    padding: 38px px;
+    padding: 38px;
   }
   /* featured */
   .featured-container h2,

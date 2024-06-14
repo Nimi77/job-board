@@ -2,7 +2,6 @@ const newsItems = [
   {
     id: 1,
     image: "../Guideline4.jpg",
-    // image: "https://img.freepik.com/free-photo/afro-american-businessman-making-notes-while-sitting-his-desk_171337-8323.jpg",
     date: "May 12, 2024 10:00 am",
     title: "How to Ace Your Next Job Interview.",
   },
@@ -34,7 +33,7 @@ const newsItems = [
 
 const BlogNews = () => {
   return (
-    <div className="blog-section">
+    <div className="blog-section" id="blogs">
       <div className="b-container mx-auto mw p-4">
         <div role="heading" className="flex items-center justify-center">
           <h2 className="text-3xl font-semibold mb-4 font-Lexend">

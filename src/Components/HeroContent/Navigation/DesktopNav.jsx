@@ -20,7 +20,7 @@ const DesktopNav = () => {
           <ul className="flex space-x-5 text-sm text-faint ">
             <li>
               <a
-                href="#home"
+                href="#"
                 className={`nav-link ${
                   activeNav === "home" ? "font-medium text-white" : "text-faint"
                 }`}
@@ -57,7 +57,7 @@ const DesktopNav = () => {
             </li>
             <li>
               <a
-                href="/jobs"
+                href="#jobs"
                 className={`nav-link ${
                   activeNav === "jobs" ? "font-medium text-white" : "text-faint"
                 }`}
@@ -68,7 +68,7 @@ const DesktopNav = () => {
             </li>
             <li>
               <a
-                href="/blogs"
+                href="#blogs"
                 className={`nav-link ${
                   activeNav === "blogs"
                     ? "font-medium text-white"

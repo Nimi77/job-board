@@ -34,11 +34,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-/* Remove outline from all buttons and input elements */
+
 button, input {
   outline: none;
 }
-/* Optionally, you can add a focus style for accessibility */
 button:focus, input:focus {
   box-shadow: none;
   border:0;

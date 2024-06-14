@@ -22,7 +22,8 @@
 .NavLinks ul li a {
   transition: 0.5ms ease-out;
   &:hover {
-    color: white;
+    color:black;
+    background-color:#e0e0e0;
   }
 }
 .MobileNav {

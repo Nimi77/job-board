@@ -1,8 +1,8 @@
 import Spinner from "./Components/Spinner/Spinner";
 import Hero from "./PageSections/Hero";
-import UserGuidelines from "./PageSections/Guidelines";
-import About from "./PageSections/About";
+import AboutUs from "./PageSections/About";
 import Services from "./PageSections/Services";
+import JobCategory from "./PageSections/JobCategory";
 import FeaturedJob from "./PageSections/FeaturedJob"
 import BlogNews from "./PageSections/Blog";
 import Testimonial from "./PageSections/Testimonial";
@@ -29,9 +29,9 @@ function App() {
   return (
     <div>
       <Hero />
-      <UserGuidelines/>
-      <About />
+      <AboutUs/>
       <Services/>
+      <JobCategory/>
       <FeaturedJob/>
       <BlogNews/>
       <Testimonial/>
