@@ -67,10 +67,8 @@ function FeaturedJob() {
     },
   ];
   const [activeFilter, setActiveFilter] = useState("All");
-  const filteredJobs =
-    activeFilter === "All"
-      ? jobs
-      : jobs.filter((job) => job.category === activeFilter);
+  const filteredJobs = activeFilter === "All" ? jobs : jobs.filter((job) => job.category === activeFilter);
+
   return (
     <div className="feature-section" id="jobs">
       <div className="featured-container flex flex-col items-center justify-center mw mx-auto font-Poppins">
@@ -97,7 +95,7 @@ function FeaturedJob() {
           </div>
         </div>
         <div className="job-list mx-auto">
-          <div className="job-list-container grid grid-cols-1 ml-0  lg:grid-cols-3 lg:gap-8  md:grid-cols-2 gap-6 mw items-center ">
+          <div className="job-list-container grid grid-cols-1 ml-0 lg:grid-cols-3 lg:gap-8 md:grid-cols-2 gap-6 items-center ">
             {filteredJobs.map((job) => (
               <div
                 key={job.id}

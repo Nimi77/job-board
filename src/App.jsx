@@ -8,9 +8,9 @@ import BlogNews from "./PageSections/Blog";
 import Testimonial from "./PageSections/Testimonial";
 import Footer from "./PageSections/Footer";
 import CallToActon from "./PageSections/CTA";
-import "./App.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ function App() {
   useEffect(()=>{
     const timer = setTimeout(()=> {
       setLoading(false);
-    }, 2000)
+    }, 3000)
 
     return () => clearTimeout(timer);
   }, [])

@@ -1,0 +1,57 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* desktop nav styling */
+.desktop-nav {
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.d-btn {
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  transition: all 0.6s ease;
+}
+.d-btn:hover {
+  background-color: #cff72b;
+  box-shadow: 0 10px 15px -9px #ecff9e, 0 4px 6px -2px #488aec17;
+}
+.d-btn:focus,
+.d-btn:active {
+  opacity: 0.85;
+  box-shadow: none;
+}
+ul li:not(:first-child) a:hover{
+  transition: all 0.5s ease-out;
+  color:white;
+}
+/* mobile nav styling */
+.mobile-nav{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .desktop-nav{
+    display: none;
+  }
+  .mobile-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    z-index:30;
+  }
+  /* the mobile nav toggling */
+  .HamburgerMenu{
+    cursor: pointer;
+    transition: all 8s ease-out 0s;
+  }
+  .menu-content{
+    position:fixed;
+    inset:0;
+    height:100%;
+    width:100%;
+    transform:translateX(0px);
+    transition:all 0.8s ease-in-out 0s;
+    z-index: 20;
+  }
+}

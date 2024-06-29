@@ -12,40 +12,18 @@ const HeroText = () => {
       <div className="hb-container font-Poppins mw mx-auto ">
         <div className="left-hb flex flex-col">
           {/* the Hero Text */}
-          <div className="lhb-main">
-            {/* only visible in mobile screens */}
-            <div className="h-icons relative">
-              <div className="toolbox absolute left-8 flex justify-center items-center bg-white shadow-md rounded-full w-5 h-5">
-                <PiToolbox color="green" size={14} />
-              </div>
-              <span className="w-2 h-2 absolute left-16 top-14 rounded-full bg-orange-400 "></span>
-              <span className="w-3 h-3 absolute left-4 top-8 rounded-full bg-cyan-500"></span>
-              <span className="w-2 h-2 rounded-full bg-slate-400 absolute right-20 top-14"></span>
-              <span className="w-3 h-3 rounded-full bg-cyan-500 absolute right-6 top-12 "></span>
-              <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center absolute right-9 top-2">
-                <SlBadge color="purple" size={14} />
-              </div>
-              <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center absolute right-12 top-[72px]">
-                <FaCode color="crimson" size={12} />
-              </div>
-              <div className="w-5 h-5 absolute top-16 left-6  bg-white shadow-lg rounded-full flex items-center justify-center">
-                <FaCheckCircle color="darkred" size={12} />
-              </div>
-            </div>
-            {/* lhb text content */}
-            <div className="lhb-text">
-              <h2 className="text-4xl font-semibold">
-                Find a job that suit your interest and skills
-              </h2>
-              <p className="text-sm font-Inter py-3">
-                Welcome to JobBoard, your go-to platform for finding the perfect
-                job oppourtunities tailored to your skills and aspirations.{" "}
-                <slot>
-                  Whether a seasoned professional, discover your next career
-                  move with JobBoard where your future begins.
-                </slot>
-              </p>
-            </div>
+          <div className="lhb-text">
+            <h2 className="text-4xl font-semibold">
+              Find a job that suit your interest and skills
+            </h2>
+            <p className="text-sm font-Inter py-3">
+              Welcome to JobBoard, your go-to platform for finding the perfect
+              job oppourtunities tailored to your skills and aspirations.{" "}
+              <slot>
+                Whether a seasoned professional, discover your next career move
+                with JobBoard where your future begins.
+              </slot>
+            </p>
           </div>
           {/* The Form Input */}
           <div className="lhb-input bg-white shadow-md rounded-md z-10">

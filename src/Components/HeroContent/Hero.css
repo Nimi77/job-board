@@ -12,9 +12,6 @@
   gap:64px;
   padding-top:56px;
 }
-.lhb-main .h-icons{
-  display:none;
-}
 .lhb-text{
   margin-bottom:74px;
 }
@@ -117,6 +114,7 @@
   }
 }
 @media screen and (max-width: 768px) {
+  
   .h-129 {
     height: 430px;
   }
@@ -143,9 +141,6 @@
     margin:auto;
     width:450px;
     padding-block-start:.8rem;
-  }
-  .lhb-main .h-icons{
-    display:grid;
   }
   .lhb-text h2 {
     font-size: 32px;

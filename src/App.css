@@ -115,6 +115,7 @@ li {
 .job p {
   line-height: 24px;
 }
+
 /* featuredjob styling */
 .featured-container {
   padding-bottom: 50px;
@@ -201,11 +202,11 @@ h4 {
 .group:hover .img-overlay {
   left: 0;
 }
-
 .list-content h3 {
   margin-top: 4px;
   line-height: 20px;
 }
+
 /* testimonials */
 .testimonials-container h2 {
   max-width: 35%;
@@ -238,6 +239,7 @@ h4 {
 .feedback:hover:not(:first-child) p {
   color: white;
 }
+
 /* cta */
 .cta-container {
   height: 16rem;
@@ -318,6 +320,27 @@ h4 {
   font-size: 14px;
 }
 @media screen and (max-width: 1078px) {
+  /*about guidelines styling */
+  .gc-content {
+    height: 350px;
+  }
+  .slide-img {
+    width: 370px;
+    height:350px;
+    border-radius: 16px;
+    display: flex;
+    justify-item: flex-start;
+  }
+  .slide-content {
+    padding: 1rem;
+  }
+  .slide-content h3 {
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 4px;
+  }
+
+  /* cta styling */
   .cta-container h2 {
     width: 58%;
     line-height: 40px;
@@ -325,7 +348,8 @@ h4 {
   .cta-container {
     height: 16rem;
     padding-inline:2rem;
-    padding-block:2rem;}
+    padding-block:2rem;
+  }
 }
 @media screen and (max-width: 948px) {
   /* guidelines styling */
@@ -349,14 +373,6 @@ h4 {
     border-radius: 16px;
     display: flex;
     justify-item: flex-start;
-  }
-  .slide-content {
-    padding: 1rem;
-  }
-  .slide-content h3 {
-    font-size: 16px;
-    padding-top: 12px;
-    padding-bottom: 4px;
   }
   .gc-line {
     margin-block: 12px;
