@@ -12,7 +12,7 @@ const DesktopNav = () => {
       <div className="logo flex items-center justify-items-center gap-2">
         <img src="../logo.png" alt="JobMaster Logo" width="22px"></img>
         <a href="" className="text-lg">
-          JobMaster
+          JobBoard
         </a>
       </div>
       <div className="NavLinks flex items-center justify-center">

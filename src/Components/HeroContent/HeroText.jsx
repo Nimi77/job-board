@@ -1,9 +1,5 @@
-/* eslint-disable no-unused-vars */
-import { PiToolbox } from "react-icons/pi";
 import { IoIosList } from "react-icons/io";
-import { FaCheckCircle, FaCode } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
-import { SlBadge } from "react-icons/sl";
 import "./Hero.css";
 
 const HeroText = () => {

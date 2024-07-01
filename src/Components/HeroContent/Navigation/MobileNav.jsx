@@ -27,7 +27,7 @@ const MobileNav = () => {
         <div className="m-logo flex justify-items-center gap-1">
           <img src="../logo.png" alt="JobMaster Logo" width="20px"/>
           <a href="" className="text-lg">
-            JobMaster
+            JobBoard
           </a>
         </div>
         <div>
