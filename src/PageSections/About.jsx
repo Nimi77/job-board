@@ -66,7 +66,7 @@ function AboutUs() {
 
   return (
     <div className="about-section" id="about">
-      <div className="about-container font-Poppins mx-auto mw flex flex-col justify-center">
+      <div className="about-container font-Poppins mx-auto mw flex flex-col justify-center lg:py-32 sm:py-24">
         {/* guidelines heading */}
         <div
           role="heading"

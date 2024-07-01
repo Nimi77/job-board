@@ -33,8 +33,8 @@ const newsItems = [
 
 const BlogNews = () => {
   return (
-    <div className="blog-section" id="blogs">
-      <div className="b-container mx-auto mw p-4">
+    <div className="blog-section py-24 md:py-36" id="blogs">
+      <div className="b-container mx-auto mw ">
         <div role="heading" className="flex items-center justify-center">
           <h2 className="text-3xl font-semibold mb-4 font-Lexend">
             Trending News For Some Career Tips

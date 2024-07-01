@@ -32,7 +32,7 @@ function Footer() {
   };
 
   return (
-    <footer className=" bg-[#244034] text-white text-center">
+    <footer className="bg-[#244034] text-white text-center">
       <div className="f-container flex flex-col justify-center py-10 mw mx-auto font-Poppins ">
         <div className="f-top">
           <div className="logo font-Lexend flex items-center justify-items-center gap-2" >

@@ -12,9 +12,7 @@ html {
   border-width: 6px;
 }
 /* about styling */
-.about-container {
-  padding-block: 8rem;
-}
+
 .guidelines-content {
   margin-top: 48px;
   margin-bottom: 80px;
@@ -92,10 +90,11 @@ li {
 .card-container p {
   line-height: 22px;
 }
+
 /* category styling */
 .c-container {
   padding-block-start: 8rem;
-  padding-block-end: 8rem;
+  padding-block-end: 9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,9 +116,6 @@ li {
 }
 
 /* featuredjob styling */
-.featured-container {
-  padding-bottom: 50px;
-}
 .filter-list {
   margin-top: 20px;
   margin-bottom: 39px;
@@ -137,7 +133,7 @@ li {
   background-color: #244034;
   color: white;
   transition: all ease 0.8s;
-  outline:none;
+  outline: none;
 }
 .job {
   width: 19rem;
@@ -179,7 +175,6 @@ h4 {
   font-weight: 600;
   font-size: 15px;
 }
-
 .job p {
   font-size: 14px;
 }
@@ -187,7 +182,7 @@ h4 {
 .blog-cards {
   margin-top: 1rem;
 }
- .main-blog img {
+.main-blog img {
   height: 25rem;
 }
 .img-overlay {
@@ -243,12 +238,12 @@ h4 {
 /* cta */
 .cta-container {
   height: 16rem;
-  padding-inline:4rem;
-  padding-block:4rem;
+  padding-inline: 4rem;
+  padding-block: 4rem;
   display: flex;
   align-items: center;
   justify: center;
-  background-color:#cff72b;
+  background-color: #cff72b;
   max-width: 82%;
 }
 .cta-container h2 {
@@ -326,7 +321,7 @@ h4 {
   }
   .slide-img {
     width: 370px;
-    height:350px;
+    height: 350px;
     border-radius: 16px;
     display: flex;
     justify-item: flex-start;
@@ -347,8 +342,8 @@ h4 {
   }
   .cta-container {
     height: 16rem;
-    padding-inline:2rem;
-    padding-block:2rem;
+    padding-inline: 2rem;
+    padding-block: 2rem;
   }
 }
 @media screen and (max-width: 948px) {
@@ -405,8 +400,7 @@ h4 {
   }
   /* category */
   .c-container {
-    padding-block-start: 26px;
-    padding-block-end: 50px;
+    padding-block:6rem;
   }
   .c-container h2 {
     font-size: 26px;
@@ -427,31 +421,24 @@ h4 {
   }
   /* blog */
   .blog-cards {
-    flex-direction:column;
+    flex-direction: column;
   }
   .blog-cards .side-cards {
     margin-top: 2rem;
   }
   .side-cards p,
-  .testimonials-container p{
+  .testimonials-container p {
     font-size: 12px;
   }
   /* testimonials */
   .testimonials-container button {
     font-size: 18px;
   }
-  /* cta */
-  .cta-container h2 {
-    max-width: 84%;
-  }
 }
-@media screen and (max-width: 768px) {
-  .mw {
-    max-width: 90%;
-  }
+@media screen and (max-width: 860px) {
   /* about styling */
-  .about-container {
-    padding-block: 4rem;
+  .about-container .top p {
+    font-size: 14px;
   }
   .slide-img,
   .slides-container {
@@ -468,9 +455,6 @@ h4 {
     margin-top: 32px;
     margin-bottom: 0;
   }
-  .about-container .top p {
-    display: none;
-  }
   .gc-content {
     height: auto;
   }
@@ -479,7 +463,7 @@ h4 {
     background-color: inherit;
   }
   .services-container {
-    padding-top: 0;
+    padding-block: 0;
   }
   .card-container {
     flex-direction: column;
@@ -510,8 +494,8 @@ h4 {
   .job:nth-child(6) {
     display: none;
   }
-  .job p{
-    font-size:13px;
+  .job p {
+    font-size: 13px;
   }
   /* testimonial */
   .testimonials-container h2 {
@@ -529,8 +513,20 @@ h4 {
     width: 100%;
   }
   .main-blog img {
-    height:20rem;
-    width:40rem
+    height: 20rem;
+    width: 40rem;
+  }
+  .cta-container h2 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mw {
+    max-width: 90%;
+  }
+  /* about styling */
+  .about-container {
+    padding-block: 6rem;
   }
   /* cta */
   .cta-container {
@@ -539,7 +535,7 @@ h4 {
     padding-block: 10px !important;
   }
   .cta-container h2 {
-    font-size: 26px;
+    font-size: 24px;
     width: 100%;
     line-height: 36px;
   }
@@ -563,6 +559,10 @@ h4 {
   .mw {
     max-width: 95%;
   }
+  /* about */
+  .about-container .top p {
+    display: none;
+  }
   .c-container h2 {
     width: 400px;
   }
@@ -575,9 +575,9 @@ h4 {
     padding-inline: 12px !important;
     padding-block: 14px;
   }
-  .cta-container  h2{
+  .cta-container h2 {
     line-height: 32px;
-   }
+  }
   /* footer stylying */
   .f-bottom {
     display: flex;
@@ -592,7 +592,6 @@ h4 {
   .fb-content span {
     font-size: 12px;
   }
-
 }
 @media screen and (max-width: 450px) {
   .job {
@@ -601,14 +600,13 @@ h4 {
     padding-block: 28px;
     padding-inline: 10px;
   }
-  .job p{
-    line-height:20px;
+  .job p {
+    line-height: 20px;
   }
-  .job-list-container{
-    gap:6px;
+  .job-list-container {
+    gap: 6px;
   }
-   .cta-container > div h2 {
+  .cta-container h2 {
     font-size: 22px;
   }
-
 }

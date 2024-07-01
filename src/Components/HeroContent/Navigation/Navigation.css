@@ -34,11 +34,7 @@ ul li:not(:first-child) a:hover{
     display: none;
   }
   .mobile-nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:relative;
-    z-index:30;
+    display:grid;
   }
   /* the mobile nav toggling */
   .HamburgerMenu{

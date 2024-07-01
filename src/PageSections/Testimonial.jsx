@@ -63,7 +63,7 @@ function Testimonial() {
   );
 
   return (
-    <div className="testimonial-section py-20 sm:py-24 md:py-36">
+    <div className="testimonial-section">
       <div className="testimonials-container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div role="heading" className="font-Lexend mb-6 flex  justify-between items-center">
           <h2 className="text-3xl  font-semibold mb-4 sm:mb-0 text-center sm:text-left">
